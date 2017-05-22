@@ -8,7 +8,7 @@ public class Tile {
 
 	TileType type = TileType.Empty;
 
-	Action<Tile> cbTileTypeChange;
+
 
 	public TileType Type {
 		get {
@@ -43,6 +43,8 @@ public class Tile {
 			return y;
 		}
 	}
+
+	Action<Tile> cbTileTypeChange; //Function we call anytime our type changes.
 
     public Tile ( World world, int x, int y ) {
         this.world = world;
