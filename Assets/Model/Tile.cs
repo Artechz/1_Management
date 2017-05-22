@@ -15,10 +15,11 @@ public class Tile {
 			return type;
 		}
 		set {
+			TileType oldType = type;
 			type = value;
 			//Call the callback (OnTileTypeChanged) and let things know it's changed.
 
-			if (cbTileTypeChange != null)
+			if (cbTileTypeChange != null && oldType != type)
 				cbTileTypeChange(this);
 		}
 	}
